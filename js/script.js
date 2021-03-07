@@ -15,3 +15,25 @@ function loadImg(){
     }
 }
 
+//evento para tratar o formulario
+let submit = document.querySelector("button")
+submit.addEventListener("click", function(event){
+    event.preventDefault()
+    let input = document.querySelectorAll("input")
+    input.forEach(function(element){
+        var p = element.nextElementSibling
+        if(element.value.length == 0){
+            element.classList.add("error")
+            p.classList.remove("msg-erro")
+            if(element.getAttribute("placeholder") == "Email Address" || element.getAttribute("placeholder") == "email@exemplo.com"){
+                element.setAttribute("placeholder", "email@exemplo.com")               
+            }else{
+                element.setAttribute("placeholder","")
+            }
+            
+        }else{
+            element.classList.remove("error")
+            p.classList.add("msg-erro") 
+        }
+    })
+})
