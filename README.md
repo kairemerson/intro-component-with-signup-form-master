@@ -6,3 +6,6 @@
 
 Thanks for checking out this front-end coding challenge.
 
+
+finalized project with html, css and javascript, responsive, background image changes according to the size of the screen through javascript, and also used javascript to handle form verification.
+
